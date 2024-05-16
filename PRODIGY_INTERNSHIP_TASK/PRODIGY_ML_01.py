@@ -3,8 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 
-# Load the dataset, Download the dataset through :
-# https://www.kaggle.com/datasets/rockysai/house-price-prediction
+# Load the dataset
 data = pd.read_csv('House Prediction.csv')
 
 # Define features and target variable
@@ -30,7 +29,12 @@ r2 = r2_score(y_test, y_pred)
 print(f'Mean Squared Error: {mse}')
 print(f'R^2 Score: {r2}')
 
-# Example prediction
-new_house = [[2000, 4, 3]]
+# Ask for new house details from the user
+square_feet = float(input("Enter square footage of the new house: "))
+bedrooms = int(input("Enter number of bedrooms in the new house: "))
+bathrooms = int(input("Enter number of bathrooms in the new house: "))
+
+# Make prediction for the new house
+new_house = [[square_feet, bedrooms, bathrooms]]
 predicted_price = model.predict(new_house)
 print(f'Predicted price for the new house: {predicted_price[0]}')
