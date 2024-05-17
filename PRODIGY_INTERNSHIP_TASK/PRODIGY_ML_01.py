@@ -3,7 +3,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 
-# Load the dataset
+# Load the dataset, Download the dataset through :
+# https://www.kaggle.com/datasets/rockysai/house-price-prediction
 data = pd.read_csv('House Prediction.csv')
 
 # Define features and target variable
