@@ -3,7 +3,8 @@ import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 
-# Load the dataset
+# Load the dataset, Download the dataset through :
+# https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python/data
 data = pd.read_csv('/content/Mall_Customers.csv')
 
 # Select features for clustering
